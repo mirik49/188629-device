@@ -1,57 +1,85 @@
 <!DOCTYPE html>
-<!-- Декоративная картинка это фоновое изображение и будет размещаться с помощью
- Кнопки слайдера реализованы неверно. Оживление слайдера описано в курсах https://htmlacademy.ru/courses/76/run/20   .
-По такой же логике работает слайдер в разделе Сервис
- тег img необходимо оборачивать в блочный элемент для ограничения максимальных размеров изображения.
-Например figure или в p. Это касается всех тегов img  в проекте.
- Карта должна быть ссылкой. при клике на нее открывается интерактивная карта -->
+
 <html lang="ru">
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
     <link rel="stylesheet" href="css/main.css">
   </head>
+  <!-- Декоративная картинка это фоновое изображение и будет размещаться с помощью
+   Кнопки слайдера реализованы неверно. Оживление слайдера описано в курсах https://htmlacademy.ru/courses/76/run/20   .
+  По такой же логике работает слайдер в разделе Сервис
+   тег img необходимо оборачивать в блочный элемент для ограничения максимальных размеров изображения.
+  Например figure или в p. Это касается всех тегов img  в проекте.
+   Карта должна быть ссылкой. при клике на нее открывается интерактивная карта -->
+   <!-- логотип не должен быть в составе тега nav. Тег nav определяет основную навигацию по сайту (меню).
+   В макете "Девайс" таким является только блок "Каталог товаров - Доставка - Гарантия - Контакты" -->
+   <!-- Форму поиска и блок "Войти - Сравнить - Корзина" необходимо обернуть в див -->
   <body>
     <header class="main-header">
+      <a class="main-header-logo">
+        <b>Device</b>
+     </a>
+     <!--
+     Форма будет здесь?-->
       <nav class="main-navigation">
-        <a class="main-header-logo">
-          <b>Device</b>
-       </a>
-       <!--Форма поиска
-       <form>
-         <input type="search">
-         <input type="submit">
-       </form>
-       -->
-        <ul class="site-navigation">
-          <li><a href="#">Войти</a></li>
-          <li><a href="#">Сравнить</a></li>
-          <li><a href="#">Корзина</a></li>
-        </ul>
-        <ul class="user-navigation">
-          <li><a href="#"> Доставка</a></li>
-          <li><a href="#">Гарантия</a></li>
-          <li><a href="#">Контакты</a></li>
-        </ul>
-        <ul class="product-catalog">
-          <li><a href="#">Каталог товаров</a>
-            <ul class="catalog-left">
-              <li><a href="#">Виртуальная реальность</a></li>
-              <li><a href="#">Моноподы для селфи</a></li>
-              <li><a href="#">Экшт-камеры</a></li>
-          </ul>
-          <ul class="catalog-center">
-            <li><a href="#">Фитнес браслеты</a></li>
-            <li><a href="#">Умные часы</a></li>
-          </ul>
-          <ul class="catalog-right">
-            <li><a href="#">квадрокоптеры</a></li>
-          </ul>
+        <ul class="main-navigation-list">
+            <li class="main-navigation-item">
+              <a href="#">Каталог товаров</a>
+              <div class="main-navigation-container">
+                <ul class="catalog-left">
+                  <li>
+                    <a href="#">Виртуальная реальность</a>
+                  </li>
+                  <li>
+                    <a href="#">Моноподы для селфи</a>
+                  </li>
+                  <li>
+                    <a href="#">Экшт-камеры</a>
+                  </li>
+              </ul>
+            <ul class="catalog-center">
+              <li>
+                <a href="#">Фитнес браслеты</a>
+              </li>
+              <li>
+                <a href="#">Умные часы</a>
+              </li>
+            </ul>
+            <ul class="catalog-right">
+              <li>
+                <a href="#">квадрокоптеры</a>
+              </li>
+            </ul>
+          </div>
         </li>
+          <li class="main-navigation-item"><a href="#"> Доставка</a></li>
+          <li class="main-navigation-item"><a href="#">Гарантия</a></li>
+          <li class="main-navigation-item"><a href="#">Контакты</a></li>
         </ul>
-      </nav>
-    </header>
 
+        <div class="user-container">
+          <!--Форма поиска
+         <form>
+           <input type="search">
+           <input type="submit">
+         </form>
+         -->
+          <ul class="site-navigation">
+            <li>
+              <a href="#">Войти</a>
+            </li>
+            <li>
+              <a href="#">Сравнить</a>
+            </li>
+            <li>
+              <a href="#">Корзина</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+    </header>
     <main class="container">
      <h1 class="visualy-hidden">Магазин "Девайс"</h1>
 
@@ -59,13 +87,12 @@
        <input type="radio" id="main-slider-btn-1" name="toggle" checked>
        <input type="radio" id="main-slider-btn-2" name="toggle">
        <input type="radio" id="main-slider-btn-3" name="toggle">
-
-       <div class="slider-controls">
-         <label for="main-slider-btn-1"><span class="radio-center"></span></label>
-         <label for="main-slider-btn-2"><span class="radio-center"></span></label>
-         <label for="main-slider-btn-3"><span class="radio-center"></span></label>
-       </div>
-       <div class = slider-inner>
+        <div class = slider-inner>
+         <div class="slider-controls">
+           <label for="main-slider-btn-1"><span class="radio-center"></span></label>
+           <label for="main-slider-btn-2"><span class="radio-center"></span></label>
+           <label for="main-slider-btn-3"><span class="radio-center"></span></label>
+         </div>
          <div class="slider-slides">
            <div class="slide first-slide">
             <p><img src="img/slider-1.png" width="370" height="480" alt="Самая длинная палка для селфи"></p>
@@ -131,12 +158,66 @@
      <section class="popular">
        <h2 class="visualy-hidden">Популярные товары</h2>
        <ul class="main-popular">
-         <li><a href="#"><img src="img/virtual.svg" alt="Устройства виртуальной реальности">Виртуфльная реальность</a></li>
-         <li><a href="#"><img src="img/monopod.svg" alt="Моноподы">Моноподы для склфи</a></li>
-         <li><a href="#"><img src="img/action-cameras.svg" alt="Экшн-камеры">Экшн-камеры</a></li>
-         <li><a href="#"><img src="img/fitness-bracelets.svg" alt="Фитнес-браслеты">Фитнес-браслеты</a></li>
-         <li><a href="#"><img src="img/smart-watch.svg" alt="Умные часы">Умные часы</a></li>
-          <li><a href="#"><img src="img/copters.svg" alt="Квадрокоптеры">Квадрокоптеры</a></li>
+         <li>
+           <a href="#">
+             <p>
+             <img src="img/virtual.svg" alt="Устройства виртуальной реальности">
+           </p>
+           <p>
+             Виртуфльная реальность
+           </p>
+          </a>
+        </li>
+         <li>
+           <a href="#">
+             <p>
+             <img src="img/monopod.svg" alt="Моноподы">
+           </p>
+           <p>
+             Моноподы для селфи
+           </p>
+         </a>
+       </li>
+         <li>
+           <a href="#">
+             <p>
+             <img src="img/action-cameras.svg" alt="Экшн-камеры">
+           </p>
+           <p>
+             Экшн-камеры
+           </p>
+         </a>
+       </li>
+         <li>
+           <a href="#">
+             <p>
+               <img src="img/fitness-bracelets.svg" alt="Фитнес-браслеты">
+             </p>
+             <p>
+               Фитнес-браслеты
+             </p>
+           </a>
+         </li>
+         <li>
+           <a href="#">
+             <p>
+               <img src="img/smart-watch.svg" alt="Умные часы">
+             </p>
+             <p>
+               Умные часы
+             </p>
+           </a>
+         </li>
+          <li>
+            <a href="#">
+              <p>
+                <img src="img/copters.svg" alt="Квадрокоптеры">
+              </p>
+              <p>
+                Квадрокоптеры
+              </p>
+            </a>
+          </li>
         </ul>
      </section>
 
@@ -148,12 +229,12 @@
        <input type="radio" id="services-slider-btn-3" name="toggle">
 
        <div class="slider-controls">
-         <label for="services-slider-btn-1"></label>
-         <label for="services-slider-btn-2"></label>
-         <label for="services-slider-btn-3"></label>
+         <label for="services-slider-btn-1"><span>Доставка</span></label>
+         <label for="services-slider-btn-2"><span>Гарантия</span></label>
+         <label for="services-slider-btn-3"><span>Доставка</span></label>
        </div>
        <div class="delivery">
-         <p><img src="img/delivery.png" width="130" height="160" alt="Логотип доставки"></p>
+
          <h3>Доставка</h3>
          <p>Мы с удовольствием доставим ваш товар прямо к вашему
            подьезду совершенно бесплатно! Ведь мы не плохо заработаем,
@@ -161,7 +242,6 @@
          </p>
        </div>
          <div class="warranty">
-         <img src="img/warranty.png" width="170" height="190" alt="Логотип гарантии">
          <h3>Гарантия</h3>
          <p>Если из-за возгорания купленного у нас товара у вас сгорит
            дом - не переживайте, мы выдадим вам новый.
@@ -171,7 +251,6 @@
        </div>
 
        <div class="credit">
-         <p><img src="img/credit.png" width="150" height="185" alt="Логотип кредита"></p>
          <h3>Кредит</h3>
          <p>Залезть в долговую яму стало проще! Кредитные консультанты
            подберут для вас наиболее выгодные условия кредита. Выгодные
@@ -228,8 +307,7 @@
      </section>
 
      <section class="info">
-       <h2 class="visualy-hidden">О нас</h2>
-       <h3>О нас</h3>
+       <h2>О нас</h2>
        <p>Огромный выбор гаджетов не оставит равнодушным гика,
          который есть в каждом из нас
        </p>
@@ -249,19 +327,28 @@
        <p>Вы можете забрать товар сами, заехав в наш офис. Заодно,
          вы сможете проверить работоспособность покупки. Всякое бывает.
        </p>
-       <a href="map.html">Карта</a>
+       <a href="map.html">
+         <img src="#" width="560" height="222" alt="Карта">
+       </a>
        <a class="button" href="write-us.html">Напишите нам</a>
      </section>
     </main>
 
     <footer class="main-footer">
-      <!-- Ссылки. РОеализация такаяже как в хедере -->
+      <div class="user-conteiner">
       <a href="index.html">Device</a>
         <ul class="user-navigation">
-          <li class="enter">Войти</li>
-          <li class="compare">Сравнить</li>
-          <li class="basket">Корзина</li>
+          <li>
+            <a href="#">Войти</a>
+          </li>
+          <li>
+            <a href="#">Сравнить</a>
+          </li>
+          <li><a href="#">Корзина</a>
+          </li>
         </ul>
+      </div>
+      <div class="main-navigation-container">
         <ul class="footer-services">
         <li><a href="#">Доставка</a></li>
         <li><a href="#">Гарантия</a></li>
@@ -269,7 +356,8 @@
       </ul>
       <p>г.Москва ул.Строителей, 15</p>
       <p>Тел.: +7(495)495-95-95</p>
-      <span class="decoration"></span>
+      </div>
+      <div class="social">
       <ul class="social-button">
         <li><a class="social-button" href="#">Фейсбук</a></li>
         <li><a class="social-button" href="#">Инстаграм</a></li>
@@ -280,10 +368,12 @@
           <img class="htmla-logo" src="#" width="30" height="25" alt="Логотип HTMLAcademy">
         </p>
       </a>
+    </div>
     </footer>
     <section class="modal modal-login">
       <h2 class="visualy-hidden">Напишите нам</h2>
-      <!--Здесь я так понимаю форма-->
+      <!--Здесь форма-->
+
       <span class="modal-close">x</span>
     </section>
     <section class="modal modal-map">
