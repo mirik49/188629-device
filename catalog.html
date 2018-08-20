@@ -10,13 +10,11 @@
       <a class="main-header-logo">
         <b>Device</b>
      </a>
-     <!--
-     Форма будет здесь?-->
       <nav class="main-navigation">
         <ul class="main-navigation-list">
             <li class="main-navigation-item">
               <a href="#">Каталог товаров</a>
-              <div class="main-navigation-container">
+              <div class="visualy-hidden main-navigation-container">
                 <ul class="catalog-left">
                   <li>
                     <a href="#">Виртуальная реальность</a>
@@ -50,12 +48,6 @@
 
 
         <div class="user-container">
-          <!--Форма поиска
-         <form>
-           <input type="search">
-           <input type="submit">
-         </form>
-         -->
           <ul class="site-navigation">
             <li>
               <a href="#">Валентин Петухов</a>
@@ -84,7 +76,55 @@
       </ul>
       <section class="filters">
         <h2>Фильтр</h2>
-        <!--Дальше идет форма-->
+        <form action="#" method="POST" oninput="showprice.value=chooseprice.value">
+
+        <fieldset>
+          <legend>
+            Стоимость
+          </legend>
+          <label class=visualy-hidden for="chooseprice">Выбор суммы</label>
+          <input type="range" id="chooseprice" min="500" max="10000" step="100">
+          <div class="show">
+            <output name="showprice">500</output>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>
+            Цвет
+          </legend>
+            <label for="check-black">
+            <input type="checkbox" id="check-black" checked>
+            Черный</label>
+          </br>
+            <label for="check-white">
+            <input type="checkbox" id="check-white">
+            Белый</label>
+          </br>
+            <label for="check-blue">
+            <input type="checkbox" id="check-blue" checked>
+            Синий</label>
+          </br>
+            <label for="check-red">
+            <input type="checkbox" id="check-red" checked>
+            Красный</label>
+          </br>
+            <label for="check-pink">
+            <input type="checkbox" id="check-pink">
+            Розовый</label>
+        </fieldset>
+        <fieldset>
+          <legend>
+            Bluetooth
+          </legend>
+          <input type="radio" id="radio-yes" checked>
+          <!--<lable for="radio-yes">Есть</lable>-->
+        </br>
+          <input type="radio" id="radio-no">
+          <!--<lable for="radio-no">Нет</lable>-->
+        </fieldset>
+        <label class="visualy-hidden" for="start-filtering">Запуск фильтрования</label>
+        <button type="submit" id="start-filtering" >Показать</button>
+        </form>
       </section>
       <section class="catalog">
         <div class="sort">
@@ -203,7 +243,7 @@
       </ul>
       <a href="https://htmlacademy.ru/intensive/htmlcss">
         <p>
-          <img class="htmla-logo" src="html-logo.svg" width="30" height="25" alt="Логотип HTMLAcademy">
+          <img class="htmla-logo" src="img/logo-html.svg" width="27" height="35" alt="Логотип HTMLAcademy">
         </p>
       </a>
     </div>

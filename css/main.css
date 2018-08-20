@@ -73,3 +73,12 @@
   display: flex;
 
 }
+.main-navigation {
+  display: flex;
+}
+.show {
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  border: 1px solid black;
+}

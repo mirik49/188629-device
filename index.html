@@ -20,13 +20,12 @@
       <a class="main-header-logo">
         <b>Device</b>
      </a>
-     <!--
-     Форма будет здесь?-->
+
       <nav class="main-navigation">
         <ul class="main-navigation-list">
-            <li class="main-navigation-item">
+          <li class="main-navigation-item">
               <a href="#">Каталог товаров</a>
-              <div class="main-navigation-container">
+              <div class="main-navigation-container visualy-hidden">
                 <ul class="catalog-left">
                   <li>
                     <a href="#">Виртуальная реальность</a>
@@ -51,20 +50,25 @@
                 <a href="#">квадрокоптеры</a>
               </li>
             </ul>
-          </div>
-        </li>
+          </div></li>
           <li class="main-navigation-item"><a href="#"> Доставка</a></li>
           <li class="main-navigation-item"><a href="#">Гарантия</a></li>
           <li class="main-navigation-item"><a href="#">Контакты</a></li>
         </ul>
 
         <div class="user-container">
-          <!--Форма поиска
-         <form>
-           <input type="search">
-           <input type="submit">
-         </form>
-         -->
+          <form action="#" method="POST">
+            <label class=visualy-hidden for="search-item">
+              Поиск по сайту
+            </label>
+            <input type="search" name="search" id="search-item" placeholder="Поиск по сайту">
+
+          <label class="visualy-hidden" for="search-button">
+            Запуск поиска
+          </label>
+            <button type="submit" class="visualy-hidden" id="search-button" value="Найти">
+            </button>
+        </form>
           <ul class="site-navigation">
             <li>
               <a href="#">Войти</a>
@@ -267,7 +271,7 @@
              <p>
                <img src="img/logo-1-low.jpg" width="175" height="45" alt="logo-1">
              </p>
-             <p>
+             <p class="visualy-hidden">
                <img src="img/logo-1-full.jpg" width="175" height="45" alt="logo-1-hover">
              </p>
            </a>
@@ -277,7 +281,7 @@
              <p>
                <img src="img/logo-2-low.jpg" width="175" height="45" alt="logo-2-hover">
              </p>
-             <p>
+             <p class="visualy-hidden">
                <img src="img/logo-2-full.jpg" width="175" height="45" alt="logo-2">
              </p>
            </a>
@@ -287,7 +291,7 @@
              <p>
                <img src="img/logo-3-low.jpg" width="175" height="45" alt="logo-3-hover">
              </p>
-             <p>
+             <p class="visualy-hidden">
                <img src="img/logo-3-full.jpg" width="175" height="45" alt="logo-3">
              </p>
            </a>
@@ -297,7 +301,7 @@
              <p>
                <img src="img/logo-4-low.jpg" width="175" height="45" alt="logo-4-hover">
              </p>
-             <p>
+             <p class="visualy-hidden">
                <img src="img/logo-4-full.jpg" width="175" height="45" alt="logo-4">
              </p>
            </a>
@@ -372,7 +376,30 @@
     </footer>
     <section class="modal modal-login">
       <h2 class="visualy-hidden">Напишите нам</h2>
-      <!--Здесь форма-->
+      <form action="#" method="POST">
+      <label for="write-us-user-name">
+        Ваше имя:
+      </label>
+    </br>
+      <input type="text" id="write-us-user-name" placeholder="Имя Фамилия">
+    </br>
+      <label for="write-us-user-email">
+        Ваш e-mail:
+      </label>
+   </br>
+      <input type="email" id="write-us-user-email" placeholder="email@example.com">
+   </br>
+      <label for="write-us-text">
+        Текст письма:
+      </label>
+    </br>
+      <textarea id="write-us-text" placeholder="В свободной форме">
+В свободной форме
+      </textarea>
+    <br>
+      <button type="submit">Отправить</button>
+    </form>
+
 
       <span class="modal-close">x</span>
     </section>
