@@ -58,15 +58,8 @@
 
         <div class="user-container">
           <form action="#" method="POST">
-            <label class=visualy-hidden for="search-item">
-              Поиск по сайту
-            </label>
-            <input type="search" name="search" id="search-item" placeholder="Поиск по сайту">
-
-          <label class="visualy-hidden" for="search-button">
-            Запуск поиска
-          </label>
-            <button type="submit" class="visualy-hidden" id="search-button" value="Найти">
+            <input type="search" name="search"  placeholder="Поиск по сайту">
+            <button type="submit" class="btn-search">
             </button>
         </form>
           <ul class="site-navigation">
@@ -374,38 +367,40 @@
       </a>
     </div>
     </footer>
+
     <section class="modal modal-login">
       <h2 class="visualy-hidden">Напишите нам</h2>
       <form action="#" method="POST">
-      <label for="write-us-user-name">
-        Ваше имя:
-      </label>
-    </br>
-      <input type="text" id="write-us-user-name" placeholder="Имя Фамилия">
-    </br>
-      <label for="write-us-user-email">
-        Ваш e-mail:
-      </label>
-   </br>
-      <input type="email" id="write-us-user-email" placeholder="email@example.com">
-   </br>
-      <label for="write-us-text">
-        Текст письма:
-      </label>
-    </br>
-      <textarea id="write-us-text" placeholder="В свободной форме">
-В свободной форме
-      </textarea>
-    <br>
+        <p>
+          <label for="write-us-user-name">
+            Ваше имя:
+          </label>
+          <input type="text" id="write-us-user-name" placeholder="Имя Фамилия">
+        </p>
+        <p>
+          <label for="write-us-user-email">
+            Ваш e-mail:
+          </label>
+          <input type="email" id="write-us-user-email" placeholder="email@example.com">
+        </p>
+        <p>
+          <label for="write-us-text">
+            Текст письма:
+          </label>
+          <textarea id="write-us-text" placeholder="В свободной форме">
+            В свободной форме
+          </textarea>
+       </p>
       <button type="submit">Отправить</button>
     </form>
 
 
-      <span class="modal-close">x</span>
+      <button type="button" class="modal-close">x<//button>
     </section>
+
     <section class="modal modal-map">
       <h2 class="visualy hidden">Мы на карте</h2>
-      <span class="modal-close">x</span>
+      <button type="button" class="modal-close">x<//button>
     </section>
     </body>
 </html>

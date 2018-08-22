@@ -76,39 +76,54 @@
       </ul>
       <section class="filters">
         <h2>Фильтр</h2>
-        <form action="#" method="POST" oninput="showprice.value=chooseprice.value">
+        <form action="#" method="POST">
 
         <fieldset>
           <legend>
             Стоимость
           </legend>
-          <label class=visualy-hidden for="chooseprice">Выбор суммы</label>
-          <input type="range" id="chooseprice" min="500" max="10000" step="100">
-          <div class="show">
-            <output name="showprice">500</output>
+          <div class="range-filter">
+            <div class="range-controls">
+              <div class="scale">
+                <div class="bar" style="margin-left: 20%; width: 30%">
+                </div>
+              </div>
+              <div class="toggle toggle-min"></div>
+              <div class="toggle toggle-max"></div>
+            </div>
+            <div class="price-controls">
+              <label class="minn-price" for="min-price">
+                От
+                <input name="min-price" type="text" value="0">
+              </label>
+              <label class="maxx-price" for="max-price">
+                До
+                <input name="max-price" type="text" value='10000'
+              </label>
+          </div>
+            <input class="visualy-hidden" type="range" id="min-price" min="500" max="10000" step="100">
+            <input class="visualy-hidden" type="range" id="max-price" min="500" max="10000" step="100">
+
           </div>
         </fieldset>
+
         <fieldset>
           <legend>
             Цвет
           </legend>
-            <label for="check-black">
+            <label>
             <input type="checkbox" id="check-black" checked>
             Черный</label>
-          </br>
-            <label for="check-white">
+            <label>
             <input type="checkbox" id="check-white">
             Белый</label>
-          </br>
-            <label for="check-blue">
+            <label>
             <input type="checkbox" id="check-blue" checked>
             Синий</label>
-          </br>
-            <label for="check-red">
+            <label>
             <input type="checkbox" id="check-red" checked>
             Красный</label>
-          </br>
-            <label for="check-pink">
+            <label>
             <input type="checkbox" id="check-pink">
             Розовый</label>
         </fieldset>
@@ -118,7 +133,6 @@
           </legend>
           <input type="radio" id="radio-yes" checked>
           <!--<lable for="radio-yes">Есть</lable>-->
-        </br>
           <input type="radio" id="radio-no">
           <!--<lable for="radio-no">Нет</lable>-->
         </fieldset>
@@ -133,8 +147,8 @@
             <li><a href="#">По цене</a></li>
             <li><a href="#">По типу</a></li>
             <li><a href="#">По популярности</a></li>
-            <li><a href="#"><span class="top"></span></a></li>
-            <li><a href="#"><span class="bottom"></span></a></li>
+            <li><a href="#"><span class="top"></span>Кнопка вверх</a></li>
+            <li><a href="#"><span class="bottom"></span>Кнопка вниз</a></li>
 <!-- Стрелочки это тоже ссылки. -->
           </ul>
         </div>
@@ -165,7 +179,7 @@
           </div>
           <div class="catalog-item-hover">
             <a href="#" class="button">В корзину</a>
-            <a href=# class="add-button">Добавить к сравнению</a>
+            <a href="#" class="add-button">Добавить к сравнению</a>
           </div>
           </li>
 
@@ -179,7 +193,7 @@
           </div>
           <div class="catalog-item-hover">
             <a href="#" class="button">В корзину</a>
-            <a href=# class="add-button">Добавить к сравнению</a>
+            <a href="#" class="add-button">Добавить к сравнению</a>
           </div>
         </li>
         <li>
@@ -192,7 +206,7 @@
             </div>
             <div class="catalog-item-hover">
               <a href="#" class="button">В корзину</a>
-              <a href=# class="add-button">Добавить к сравнению</a>
+              <a href="#" class="add-button">Добавить к сравнению</a>
             </div>
 
           </li>
