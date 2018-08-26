@@ -4,7 +4,9 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
   </head>
   <!-- Декоративная картинка это фоновое изображение и будет размещаться с помощью
    Кнопки слайдера реализованы неверно. Оживление слайдера описано в курсах https://htmlacademy.ru/courses/76/run/20   .
@@ -58,8 +60,9 @@
 
         <div class="user-container">
           <form action="#" method="POST">
-            <input type="search" name="search"  placeholder="Поиск по сайту">
+            <input type="search" name="search" class="search" autocomplete="off" placeholder="Поиск по сайту">
             <button type="submit" class="btn-search">
+              Найти
             </button>
         </form>
           <ul class="site-navigation">
@@ -78,7 +81,7 @@
 
     </header>
     <main class="container">
-     <h1 class="visualy-hidden">Магазин "Девайс"</h1>
+       <h1 class="visualy-hidden">Магазин "Девайс"</h1>
 
      <section class="main-slider">
        <input type="radio" id="main-slider-btn-1" name="toggle" checked>
@@ -95,7 +98,7 @@
             <p><img src="img/slider-1.png" width="370" height="480" alt="Самая длинная палка для селфи"></p>
             <span>01</span>
             <div class="description">
-              <b>Делай селфи, как Бен Стиллер!</b>
+              <h2>Делай селфи, как Бен Стиллер!</h2>
               <p>Самая длинная палка для селфи доступна в нашем магазине.</p>
               <p>Восемь (Восемь, Карл!) метров длинной и весом всего 5 килограмм.</p>
               <a class="button button-more" href="#">Подробнее</a>
@@ -157,17 +160,17 @@
        <ul class="main-popular">
          <li>
            <a href="#">
-             <p>
+             <p class="img-container">
              <img src="img/popular-1.svg" width="97" height="55" alt="Устройства виртуальной реальности">
            </p>
            <p>
-             Виртуфльная реальность
+             Виртуальная реальность
            </p>
           </a>
         </li>
          <li>
            <a href="#">
-             <p>
+             <p class="img-container">
              <img src="img/popular-2.svg" width="86" height="117" alt="Моноподы">
            </p>
            <p>
@@ -177,7 +180,7 @@
        </li>
          <li>
            <a href="#">
-             <p>
+             <p class="img-container">
              <img src="img/popular-3.svg" width="71" height="87" alt="Экшн-камеры">
            </p>
            <p>
@@ -187,7 +190,7 @@
        </li>
          <li>
            <a href="#">
-             <p>
+             <p class="img-container">
                <img src="img/popular-4.svg" width="107" height="65" alt="Фитнес-браслеты">
              </p>
              <p>
@@ -197,7 +200,7 @@
          </li>
          <li>
            <a href="#">
-             <p>
+             <p class="img-container">
                <img src="img/popular-5.svg" width="56" height="98" alt="Умные часы">
              </p>
              <p>
@@ -207,7 +210,7 @@
          </li>
           <li>
             <a href="#">
-              <p>
+              <p class="img-container">
                 <img src="img/popular-6.svg" width="160" height="160" alt="Квадрокоптеры">
               </p>
               <p>
@@ -226,20 +229,20 @@
        <input type="radio" id="services-slider-btn-3" name="toggle">
 
        <div class="slider-controls">
-         <label for="services-slider-btn-1"><span>Доставка</span></label>
-         <label for="services-slider-btn-2"><span>Гарантия</span></label>
-         <label for="services-slider-btn-3"><span>Доставка</span></label>
+         <label for="services-slider-btn-1" class="button"><span>Доставка</span></label>
+         <label for="services-slider-btn-2" class="button"><span>Гарантия</span></label>
+         <label for="services-slider-btn-3" class="button"><span>Доставка</span></label>
        </div>
        <div class="delivery">
 
-         <h3>Доставка</h3>
+         <h3 class="">Доставка</h3>
          <p>Мы с удовольствием доставим ваш товар прямо к вашему
            подьезду совершенно бесплатно! Ведь мы не плохо заработаем,
            поднимая его на ваш этаж.
          </p>
        </div>
          <div class="warranty">
-         <h3>Гарантия</h3>
+         <h3 class="visualy-hidden">Гарантия</h3>
          <p>Если из-за возгорания купленного у нас товара у вас сгорит
            дом - не переживайте, мы выдадим вам новый.
          </p>
@@ -248,7 +251,7 @@
        </div>
 
        <div class="credit">
-         <h3>Кредит</h3>
+         <h3 class="visualy-hidden">Кредит</h3>
          <p>Залезть в долговую яму стало проще! Кредитные консультанты
            подберут для вас наиболее выгодные условия кредита. Выгодные
            для нашего банка розумеется.
@@ -261,41 +264,43 @@
        <ul class="logo-list">
          <li>
            <a href="#">
-             <p>
-               <img src="img/logo-1-low.jpg" width="175" height="45" alt="logo-1">
+             <p class="img img1" >
+               <img src="img/logo-1-full.png" width="175" height="45" alt="logo-1-hover">
              </p>
-             <p class="visualy-hidden">
-               <img src="img/logo-1-full.jpg" width="175" height="45" alt="logo-1-hover">
+             <p class="img img1-hover">
+               <img src="img/logo-1-low.jpg"  width="175" height="45" alt="logo-1">
              </p>
+
            </a>
          </li>
          <li>
            <a href="#">
-             <p>
+             <p class="img img2">
+               <img src="img/logo-2-full.png" width="175" height="45" alt="logo-2">
+             </p>
+             <p class="img img2-hover">
                <img src="img/logo-2-low.jpg" width="175" height="45" alt="logo-2-hover">
              </p>
-             <p class="visualy-hidden">
-               <img src="img/logo-2-full.jpg" width="175" height="45" alt="logo-2">
-             </p>
+
            </a>
          </li>
          <li>
            <a href="#">
-             <p>
+             <p class="img img3">
+               <img src="img/logo-3-full.png" width="175" height="45" alt="logo-3">
+             </p>
+             <p class="img img3-hover">
                <img src="img/logo-3-low.jpg" width="175" height="45" alt="logo-3-hover">
              </p>
-             <p class="visualy-hidden">
-               <img src="img/logo-3-full.jpg" width="175" height="45" alt="logo-3">
-             </p>
            </a>
          </li>
          <li>
            <a href="#">
-             <p>
-               <img src="img/logo-4-low.jpg" width="175" height="45" alt="logo-4-hover">
+             <p class="img img4">
+               <img src="img/logo-4-full.png" width="175" height="45" alt="logo-4">
              </p>
-             <p class="visualy-hidden">
-               <img src="img/logo-4-full.jpg" width="175" height="45" alt="logo-4">
+             <p class="img img4-hover">
+               <img src="img/logo-4-low.jpg" width="175" height="45" alt="logo-4-hover">
              </p>
            </a>
           </li>
@@ -333,7 +338,7 @@
 
     <footer class="main-footer">
       <div class="user-conteiner">
-      <a href="index.html">Device</a>
+      <a href="index.html" class="logo">Device</a>
         <ul class="user-navigation">
           <li>
             <a href="#">Войти</a>
@@ -387,20 +392,20 @@
           <label for="write-us-text">
             Текст письма:
           </label>
-          <textarea id="write-us-text" placeholder="В свободной форме">
+          <textarea class="textarea" id="write-us-text" placeholder="В свободной форме" rows="9" cols="50">
             В свободной форме
           </textarea>
        </p>
-      <button type="submit">Отправить</button>
+      <button type="submit" class="button modal-button">Отправить</button>
     </form>
 
 
-      <button type="button" class="modal-close">x<//button>
+      <button type="button" class="modal-close">x</button>
     </section>
 
     <section class="modal modal-map">
       <h2 class="visualy hidden">Мы на карте</h2>
-      <button type="button" class="modal-close">x<//button>
+      <button type="button" class="modal-close">x</button>
     </section>
     </body>
 </html>

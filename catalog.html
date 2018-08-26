@@ -3,7 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
@@ -66,11 +68,13 @@
       </nav>
     </header>
 
-    <main>
+    <main class="catalog-main-container">
       <h1>Моноподы для селфи</h1>
       <ul class="breadcrumbs">
         <li><a href="index.html">Главная</a></li>
+        <li><img src="img/nav-arrow.svg" alt="Стрелка"></li>
         <li><a href="catalog.html">Каталог товаров</a></li>
+        <li><img src="img/nav-arrow.svg" alt="Стрелка"></li>
         <li class="breadcrumbs-current"><a>Моноподы для селфи</a></li>
 <!-- На последнем пункте хлебных крошек должна быть тег <a>, только без аттрибута href -->
       </ul>
@@ -94,11 +98,11 @@
             <div class="price-controls">
               <label class="minn-price" for="min-price">
                 От
-                <input name="min-price" type="text" value="0">
+                <input name="min-price" id="minn-price" type="text" value="0">
               </label>
-              <label class="maxx-price" for="max-price">
+              <label class="maxx-price" for="maxx-price">
                 До
-                <input name="max-price" type="text" value='10000'
+                <input name="max-price" id="maxx-price" type="text" value='10000'>
               </label>
           </div>
             <input class="visualy-hidden" type="range" id="min-price" min="500" max="10000" step="100">
@@ -137,13 +141,14 @@
           <!--<lable for="radio-no">Нет</lable>-->
         </fieldset>
         <label class="visualy-hidden" for="start-filtering">Запуск фильтрования</label>
-        <button type="submit" id="start-filtering" >Показать</button>
+        <button type="submit" id="start-filtering" class="button" >Показать</button>
         </form>
       </section>
+
       <section class="catalog">
         <div class="sort">
           <h3>Сортировка:</h3>
-          <ul>
+          <ul class="sort-type">
             <li><a href="#">По цене</a></li>
             <li><a href="#">По типу</a></li>
             <li><a href="#">По популярности</a></li>
@@ -155,70 +160,76 @@
         <h2 class="visualy-hidden">Каталог товаров</h2>
         <ul class="catalog-list">
 
-          <li class="catalog-item">
+          <li class="catalog-item" tabindex="0">
             <div class="catalog-item-img">
               <img src="img/item-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
             </div>
+            <div class="catalog-item-hover">
+              <a href="#" class="button button-hover">В корзину</a>
+              <a href=# class="add-button button-hover">Добавить к сравнению</a>
+            </div>
+
             <div class="catalog-item-price">
               <a href="#">Любительская селфи палка</a>
               <span class="catalog-item-value">500 руб.</span>
             </div>
-            <div class="catalog-item-hover">
-              <a href="#" class="button">В корзину</a>
-              <a href=# class="add-button">Добавить к сравнению</a>
-            </div>
-          </li>
+         </li>
 
-          <li class="catalog-item">
+
+          <li class="catalog-item" tabindex="0">
             <div class="catalog-item-img">
               <img src="img/item-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
+          </div>
+          <div class="catalog-item-hover">
+            <a href="#" class="button button-hover">В корзину</a>
+            <a href="#" class="add-button button-hover">Добавить к сравнению</a>
           </div>
           <div class="catalog-item-price">
             <a href="#">Профессиональная селфи-палка</a>
             <span class="catalog-item-value">1500 руб.</span>
           </div>
-          <div class="catalog-item-hover">
-            <a href="#" class="button">В корзину</a>
-            <a href="#" class="add-button">Добавить к сравнению</a>
-          </div>
+
           </li>
 
-          <li class="catalog-item">
+
+          <li class="catalog-item" tabindex="0">
               <div class="catalog-item-img">
               <img src="img/item-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
+            </div>
+            <div class="catalog-item-hover">
+              <a href="#" class="button button-hover">В корзину</a>
+              <a href="#" class="add-button button-hover">Добавить к сравнению</a>
             </div>
             <div class="catalog-item-price">
             <a href="#">Непотопляемая селфи палка</a>
               <span class="catalog-item-value">2500 руб.</span>
           </div>
-          <div class="catalog-item-hover">
-            <a href="#" class="button">В корзину</a>
-            <a href="#" class="add-button">Добавить к сравнению</a>
-          </div>
+
         </li>
-        <li>
+        <li class="catalog-item" tabindex="0">
         <div class="catalog-item-img">
               <img src="img/item-4.jpg" width="360" height="380" alt="Следуй за мной селфи-палка">
+            </div>
+            <div class="catalog-item-hover">
+              <a href="#" class="button button-hover">В корзину</a>
+              <a href="#" class="add-button button-hover">Добавить к сравнению</a>
             </div>
             <div class="catalog-item-price">
               <a href="#">Селфи-палка "Следуй за мной"</a>
                 <span class="catalog-item-value">4900 руб.</span>
             </div>
-            <div class="catalog-item-hover">
-              <a href="#" class="button">В корзину</a>
-              <a href="#" class="add-button">Добавить к сравнению</a>
-            </div>
+
 
           </li>
         </ul>
         <ul class="pagination-list">
 <!-- "Назад" и "вперед" это тоже ссылки и элементы того же списка -->
-          <li class="pagination-item"><a href="#">Назад</a></li>
+          <li class="pagination-item"><a href="#" class="button-pagination">Назад</a></li>
           <li class="pagination-item pagination-item-current"><a >1</a></li>
           <li class="pagination-item"><a href="#">2</a></li>
           <li class="pagination-item"><a href="#">3</a></li>
           <li class="pagination-item"><a href="#">4</a></li>
-          <li class="pagination-item"><a href="#">Вперед</a></li>
+          <li class="pagination-item"><a href="#" class="button-pagination">Вперед</a></li>
         </ul>
       </section>
     </main>
