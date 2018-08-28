@@ -18,72 +18,80 @@
    В макете "Девайс" таким является только блок "Каталог товаров - Доставка - Гарантия - Контакты" -->
    <!-- Форму поиска и блок "Войти - Сравнить - Корзина" необходимо обернуть в див -->
   <body>
-    <header class="main-header">
+    <header class="main-header main-container">
       <a class="main-header-logo">
         <b>Device</b>
      </a>
 
       <nav class="main-navigation">
-        <ul class="main-navigation-list">
+        <ul class="main-navigation-list container">
           <li class="main-navigation-item">
               <a href="#">Каталог товаров</a>
               <div class="main-navigation-container visualy-hidden">
-                <ul class="catalog-left">
-                  <li>
-                    <a href="#">Виртуальная реальность</a>
-                  </li>
-                  <li>
-                    <a href="#">Моноподы для селфи</a>
-                  </li>
-                  <li>
-                    <a href="#">Экшт-камеры</a>
-                  </li>
+                <div class="list-wrapper">
+                  <ul class="catalog-left">
+                    <li>
+                      <a href="#">Виртуальная реальность</a>
+                    </li>
+                    <li>
+                      <a href="#">Моноподы для селфи</a>
+                    </li>
+                    <li>
+                      <a href="#">Экшт-камеры</a>
+                    </li>
+                </ul>
+              <ul class="catalog-center">
+                <li>
+                  <a href="#">Фитнес браслеты</a>
+                </li>
+                <li>
+                  <a href="#">Умные часы</a>
+                </li>
               </ul>
-            <ul class="catalog-center">
-              <li>
-                <a href="#">Фитнес браслеты</a>
-              </li>
-              <li>
-                <a href="#">Умные часы</a>
-              </li>
-            </ul>
-            <ul class="catalog-right">
-              <li>
-                <a href="#">квадрокоптеры</a>
-              </li>
-            </ul>
+              <ul class="catalog-right">
+                <li>
+                  <a href="#">квадрокоптеры</a>
+                </li>
+              </ul>
+            </div>
           </div></li>
-          <li class="main-navigation-item"><a href="#"> Доставка</a></li>
-          <li class="main-navigation-item"><a href="#">Гарантия</a></li>
-          <li class="main-navigation-item"><a href="#">Контакты</a></li>
+          <div class="main-navigation-item-wrapper">
+            <li class="main-navigation-item"><a href="#"> Доставка</a></li>
+            <li class="main-navigation-item"><a href="#">Гарантия</a></li>
+            <li class="main-navigation-item"><a href="#">Контакты</a></li>
+          </div>
         </ul>
 
-        <div class="user-container">
-          <form action="#" method="POST">
-            <input type="search" name="search" class="search" autocomplete="off" placeholder="Поиск по сайту">
-            <button type="submit" class="btn-search">
-              Найти
-            </button>
-        </form>
-          <ul class="site-navigation">
-            <li>
-              <a href="#">Войти</a>
-            </li>
-            <li>
-              <a href="#">Сравнить</a>
-            </li>
-            <li>
-              <a href="#">Корзина</a>
-            </li>
-          </ul>
+        <div class="search-nav-wrapper container">
+          <div class="search-container">
+            <form action="#" method="POST">
+              <input type="search" name="search" class="search" autocomplete="off" placeholder="Поиск по сайту">
+              <button type="submit" class="btn-search">
+                Найти
+              </button>
+          </form>
+        </div>
+          <div class="user-container">
+            <ul class="site-navigation">
+              <li>
+                <a href="#">Войти</a>
+              </li>
+              <li>
+                <a href="#">Сравнить</a>
+              </li>
+              <li>
+                <a href="#">Корзина</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </nav>
 
     </header>
-    <main class="container">
+    <main class="">
        <h1 class="visualy-hidden">Магазин "Девайс"</h1>
 
-     <section class="main-slider">
+     <section class="main-slider main-container">
        <input type="radio" id="main-slider-btn-1" name="toggle" checked>
        <input type="radio" id="main-slider-btn-2" name="toggle">
        <input type="radio" id="main-slider-btn-3" name="toggle">
@@ -155,7 +163,7 @@
         </div>
       </div>
      </section>
-     <section class="popular">
+     <section class="popular main-container">
        <h2 class="visualy-hidden">Популярные товары</h2>
        <ul class="main-popular">
          <li>
@@ -307,7 +315,7 @@
 
        </ul>
      </section>
-
+     <div class="info-wrapper main-container">
      <section class="info">
        <h2>О нас</h2>
        <p>Огромный выбор гаджетов не оставит равнодушным гика,
@@ -334,48 +342,55 @@
        </a>
        <a class="button" href="write-us.html">Напишите нам</a>
      </section>
+   </div>
     </main>
 
     <footer class="main-footer">
-      <div class="user-conteiner">
-      <a href="index.html" class="logo">Device</a>
-        <ul class="user-navigation">
+      <div class="container">
+        <div class="user-conteiner">
+        <a href="index.html" class="logo">Device</a>
+          <ul class="user-navigation">
+            <li>
+              <a href="#">Войти</a>
+            </li>
+            <li>
+              <a href="#">Сравнить</a>
+            </li>
+            <li><a href="#">Корзина</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-navigation-container">
+          <ul class="footer-services">
+          <li><a href="#">Доставка</a></li>
+          <li><a href="#">Гарантия</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+        <p>г.Москва ул.Строителей, 15</p>
+        <p>Тел.: +7(495)495-95-95</p>
+        </div>
+        <div class="social">
+        <ul class="social-button">
+          <li><a class="social-button" href="#">Фейсбук</a></li>
+          <li><a class="social-button" href="#">Инстаграм</a></li>
+          <li><a class="social-button" href="#">Твиттер</a></li>
           <li>
-            <a href="#">Войти</a>
-          </li>
-          <li>
-            <a href="#">Сравнить</a>
-          </li>
-          <li><a href="#">Корзина</a>
+            <a href="https://htmlacademy.ru/intensive/htmlcss" class="footer-logo">
+              <p>
+                <img class="htmla-logo" src="img/logo-html.svg" width="27" height="35" alt="Логотип HTMLAcademy">
+              </p>
+            </a>
           </li>
         </ul>
+
       </div>
-      <div class="main-navigation-container">
-        <ul class="footer-services">
-        <li><a href="#">Доставка</a></li>
-        <li><a href="#">Гарантия</a></li>
-        <li><a href="#">Контакты</a></li>
-      </ul>
-      <p>г.Москва ул.Строителей, 15</p>
-      <p>Тел.: +7(495)495-95-95</p>
-      </div>
-      <div class="social">
-      <ul class="social-button">
-        <li><a class="social-button" href="#">Фейсбук</a></li>
-        <li><a class="social-button" href="#">Инстаграм</a></li>
-        <li><a class="social-button" href="#">Твиттер</a></li>
-      </ul>
-      <a href="https://htmlacademy.ru/intensive/htmlcss">
-        <p>
-          <img class="htmla-logo" src="img/logo-html.svg" width="27" height="35" alt="Логотип HTMLAcademy">
-        </p>
-      </a>
     </div>
     </footer>
 
     <section class="modal modal-login">
       <h2 class="visualy-hidden">Напишите нам</h2>
       <form action="#" method="POST">
+        <div class="modal-wrapper">
         <p>
           <label for="write-us-user-name">
             Ваше имя:
@@ -392,11 +407,13 @@
           <label for="write-us-text">
             Текст письма:
           </label>
-          <textarea class="textarea" id="write-us-text" placeholder="В свободной форме" rows="9" cols="50">
+          <textarea class="textarea" id="write-us-text" placeholder="В свободной форме">
             В свободной форме
           </textarea>
        </p>
+
       <button type="submit" class="button modal-button">Отправить</button>
+      </div>
     </form>
 
 
