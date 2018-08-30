@@ -6,7 +6,7 @@
     <title>HTML Academy: Девайс</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&amp;subset=cyrillic" rel="stylesheet">
   </head>
   <!-- Декоративная картинка это фоновое изображение и будет размещаться с помощью
    Кнопки слайдера реализованы неверно. Оживление слайдера описано в курсах https://htmlacademy.ru/courses/76/run/20   .
@@ -19,16 +19,16 @@
    <!-- Форму поиска и блок "Войти - Сравнить - Корзина" необходимо обернуть в див -->
   <body>
     <header class="main-header main-container">
-      <a class="main-header-logo">
+      <a href="index.html" class="main-header-logo">
         <b>Device</b>
      </a>
 
       <nav class="main-navigation">
         <ul class="main-navigation-list container">
           <li class="main-navigation-item">
-              <a href="#">Каталог товаров</a>
-              <div class="main-navigation-container visualy-hidden">
-                <div class="list-wrapper">
+            <a href="#" class="catalog-link">Каталог товаров</a>
+              <div class="main-navigation-container">
+                <div class="list-wrapper"></div>
                   <ul class="catalog-left">
                     <li>
                       <a href="#">Виртуальная реальность</a>
@@ -37,9 +37,9 @@
                       <a href="#">Моноподы для селфи</a>
                     </li>
                     <li>
-                      <a href="#">Экшт-камеры</a>
+                      <a href="#">Экшн-камеры</a>
                     </li>
-                </ul>
+                  </ul>
               <ul class="catalog-center">
                 <li>
                   <a href="#">Фитнес браслеты</a>
@@ -50,11 +50,12 @@
               </ul>
               <ul class="catalog-right">
                 <li>
-                  <a href="#">квадрокоптеры</a>
+                  <a href="#">Квадрокоптеры</a>
                 </li>
               </ul>
+
             </div>
-          </div></li>
+          </li>
           <div class="main-navigation-item-wrapper">
             <li class="main-navigation-item"><a href="#"> Доставка</a></li>
             <li class="main-navigation-item"><a href="#">Гарантия</a></li>
@@ -63,18 +64,21 @@
         </ul>
 
         <div class="search-nav-wrapper container">
-          <div class="search-container">
-            <form action="#" method="POST">
-              <input type="search" name="search" class="search" autocomplete="off" placeholder="Поиск по сайту">
+          <div class="search-container visualy-hidden">
+            <form action="#" method="POST" class="search-form">
+              <div class="psevdo-wrapper">
+                <input type="search" name="search" class="search" autocomplete="off" placeholder="Поиск по сайту">
+
               <button type="submit" class="btn-search">
                 Найти
               </button>
+</div>
           </form>
-        </div>
+</div>
           <div class="user-container">
             <ul class="site-navigation">
               <li>
-                <a href="#">Войти</a>
+                <a href="#" >Войти</a>
               </li>
               <li>
                 <a href="#">Сравнить</a>
@@ -89,7 +93,7 @@
 
     </header>
     <main class="">
-       <h1 class="visualy-hidden">Магазин "Девайс"</h1>
+       <h1 class="visually-hidden">Магазин "Девайс"</h1>
 
      <section class="main-slider main-container">
        <input type="radio" id="main-slider-btn-1" name="toggle" checked>
@@ -164,7 +168,7 @@
       </div>
      </section>
      <section class="popular main-container">
-       <h2 class="visualy-hidden">Популярные товары</h2>
+       <h2 class="visually-hidden">Популярные товары</h2>
        <ul class="main-popular">
          <li>
            <a href="#">
@@ -231,7 +235,7 @@
 
      <section class="services-slider">
 <!-- Слайдер. Ссылка на принцип работы прописал в верхнем слайдере -->
-       <h2 class="visualy-hidden"> Услуги</h2>
+       <h2 class="visually-hidden"> Услуги</h2>
        <input type="radio" id="services-slider-btn-1" name="toggle" checked>
        <input type="radio" id="services-slider-btn-2" name="toggle">
        <input type="radio" id="services-slider-btn-3" name="toggle">
@@ -250,7 +254,7 @@
          </p>
        </div>
          <div class="warranty">
-         <h3 class="visualy-hidden">Гарантия</h3>
+         <h3 class="visually-hidden">Гарантия</h3>
          <p>Если из-за возгорания купленного у нас товара у вас сгорит
            дом - не переживайте, мы выдадим вам новый.
          </p>
@@ -259,7 +263,7 @@
        </div>
 
        <div class="credit">
-         <h3 class="visualy-hidden">Кредит</h3>
+         <h3 class="visually-hidden">Кредит</h3>
          <p>Залезть в долговую яму стало проще! Кредитные консультанты
            подберут для вас наиболее выгодные условия кредита. Выгодные
            для нашего банка розумеется.
@@ -268,7 +272,7 @@
      </section>
      <!-- Верстка логотипов-->
      <section class="partners">
-       <h2 class=visualy-hidden>Логотипы</h2>
+       <h2 class=visually-hidden>Логотипы</h2>
        <ul class="logo-list">
          <li>
            <a href="#">
@@ -332,7 +336,7 @@
        <a class="button" href="contacts.html">Подробнее о нас</a>
      </section>
      <section class="contact">
-       <h2 class="visualy-hidden">Контакты</h2>
+       <h2 class="visually-hidden">Контакты</h2>
        <h3>Контакты</h3>
        <p>Вы можете забрать товар сами, заехав в наш офис. Заодно,
          вы сможете проверить работоспособность покупки. Всякое бывает.
@@ -388,7 +392,7 @@
     </footer>
 
     <section class="modal modal-login">
-      <h2 class="visualy-hidden">Напишите нам</h2>
+      <h2 class="visually-hidden">Напишите нам</h2>
       <form action="#" method="POST">
         <div class="modal-wrapper">
         <p>
