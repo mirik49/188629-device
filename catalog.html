@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="ru">
   <head>
     <meta charset="utf-8">
@@ -17,7 +17,6 @@
         <li class="main-navigation-item">
           <a href="#" class="catalog-link">Каталог товаров</a>
             <div class="main-navigation-container">
-              <div class="list-wrapper"></div>
                 <ul class="catalog-left">
                   <li>
                     <a href="#">Виртуальная реальность</a>
@@ -86,7 +85,7 @@
   </header>
 
     <main class="catalog main-container">
-      <div class="container">
+      <div class="container-breadcrumbs">
         <h1>Моноподы для селфи</h1>
         <ul class="breadcrumbs ">
           <li><a href="index.html">Главная</a></li>
@@ -98,20 +97,24 @@
         </ul>
     </div>
       <div class="catalog-wrapper container">
+
+
         <section class="filters">
+          <div class="filters-wrapper">
           <div class="filters-header">
             <h2>Фильтр</h2>
           </div>
           <form action="#" method="POST">
-
+           <div class="line line-1"></div>
           <fieldset>
+
             <legend>
               Стоимость
             </legend>
             <div class="range-filter">
               <div class="range-controls">
                 <div class="scale">
-                  <div class="bar" style="margin-left: 20%; width: 30%">
+                  <div class="bar" style=" width: 55%">
                   </div>
                 </div>
                 <div class="toggle toggle-min"></div>
@@ -126,49 +129,62 @@
                   До
                   <input name="max-price" id="maxx-price" type="text" value='10000'>
                 </label>
+
             </div>
               <input class="visualy-hidden" type="range" id="min-price" min="500" max="10000" step="100">
               <input class="visualy-hidden" type="range" id="max-price" min="500" max="10000" step="100">
 
             </div>
           </fieldset>
-
+            <div class="line line-2"></div>
           <fieldset>
             <legend>
               Цвет
             </legend>
-            <div class="filter-column-wrapper">
-              <label>
-              <input type="checkbox" id="check-black" checked>
-              Черный</label>
-              <label>
-              <input type="checkbox" id="check-white">
-              Белый</label>
-              <label>
-              <input type="checkbox" id="check-blue" checked>
-              Синий</label>
-              <label>
-              <input type="checkbox" id="check-red" checked>
-              Красный</label>
-              <label>
-              <input type="checkbox" id="check-pink">
-              Розовый</label>
-            </div>
+              <ul class="filter-column-wrapper">
+                <li>
+                  <input type="checkbox" id="check-black" checked>
+                  <label for="check-black">Черный</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="check-white">
+                  <label for="check-white">Белый</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="check-blue" checked>
+                  <label for="check-blue">Синий</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="check-red" checked>
+                  <label for="check-red">Красный</label></li>
+                <li>
+                  <input type="checkbox" id="check-pink">
+                  <label for="check-pink">Розовый</label>
+                </li>
+              </ul>
           </fieldset>
+          <div class="line line-3"></div>
           <fieldset>
             <legend>
               Bluetooth
             </legend>
-              <div class="filter-column-wrapper">
-                <input type="radio" id="radio-yes" checked>
-                <!--<lable for="radio-yes">Есть</lable>-->
-                <input type="radio" id="radio-no">
-                <!--<lable for="radio-no">Нет</lable>-->
-              </div>
+              <ul class="filter-column-wrapper">
+                <li>
+                  <lable for="r-yes">
+                  <input type="radio" id="r-yes" checked>
+                  Есть</lable>
+                </li>
+                <li>
+                  <lable for="r-no">
+                  <input type="radio" id="r-no" >
+                  Нет</lable>
+              </li>
+              </ul>
           </fieldset>
           <label class="visualy-hidden" for="start-filtering">Запуск фильтрования</label>
           <button type="submit" id="start-filtering" class="button" >Показать</button>
           </form>
+        </div>
         </section>
 
         <section class="catalog">
@@ -263,7 +279,7 @@
     </div>
     </main>
 
-    <footer class="main-footer">
+    <footer class="main-footer main-container">
       <div class="container">
         <div class="user-conteiner">
         <a href="index.html" class="logo">Device</a>
