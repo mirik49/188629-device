@@ -96,7 +96,7 @@
   <!-- На последнем пункте хлебных крошек должна быть тег <a>, только без аттрибута href -->
         </ul>
     </div>
-      <div class="catalog-wrapper container">
+      <div class="catalog-wrapper">
 
 
         <section class="filters">
@@ -144,22 +144,22 @@
               <ul class="filter-column-wrapper">
                 <li>
                   <input type="checkbox" id="check-black" checked>
-                  <label for="check-black">Черный</label>
+                  <label for="check-black" tabindex="0">Черный</label>
                 </li>
                 <li>
                   <input type="checkbox" id="check-white">
-                  <label for="check-white">Белый</label>
+                  <label for="check-white" tabindex="0">Белый</label>
                 </li>
                 <li>
                   <input type="checkbox" id="check-blue" checked>
-                  <label for="check-blue">Синий</label>
+                  <label for="check-blue" tabindex="0">Синий</label>
                 </li>
                 <li>
                   <input type="checkbox" id="check-red" checked>
-                  <label for="check-red">Красный</label></li>
+                  <label for="check-red" tabindex="0">Красный</label></li>
                 <li>
                   <input type="checkbox" id="check-pink">
-                  <label for="check-pink">Розовый</label>
+                  <label for="check-pink" tabindex="0">Розовый</label>
                 </li>
               </ul>
           </fieldset>
@@ -170,14 +170,14 @@
             </legend>
               <ul class="filter-column-wrapper">
                 <li>
-                  <lable for="r-yes">
-                  <input type="radio" id="r-yes" checked>
-                  Есть</lable>
+
+                  <input type="radio" name="Bluetooth" id="r-yes" checked>
+                  <label for="r-yes" tabindex="0">Есть</label>
                 </li>
                 <li>
-                  <lable for="r-no">
-                  <input type="radio" id="r-no" >
-                  Нет</lable>
+
+                  <input type="radio" name="Bluetooth" id="r-no" >
+                <label for="r-no" tabindex="0">Нет</label>
               </li>
               </ul>
           </fieldset>
@@ -191,17 +191,17 @@
           <div class="sort">
             <h3>Сортировка:</h3>
             <ul class="sort-type">
-              <li><a href="#">По цене</a></li>
+              <li><a href="#" class="current">По цене</a></li>
               <li><a href="#">По типу</a></li>
               <li><a href="#">По популярности</a></li>
-              <li><a href="#"><span class="top"></span>Кнопка вверх</a></li>
-              <li><a href="#"><span class="bottom"></span>Кнопка вниз</a></li>
+              <li><a href="#" class="top"></a></li>
+              <li><a  href="#" class="bottom current"></a></li>
   <!-- Стрелочки это тоже ссылки. -->
             </ul>
           </div>
           <h2 class="visualy-hidden">Каталог товаров</h2>
           <ul class="catalog-list">
-            <div class="catalog-list-wrapper">
+              <div class="catalog-list-wrapper">
               <li class="catalog-item" tabindex="0">
                 <div class="catalog-item-img">
                   <img src="img/item-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
@@ -266,12 +266,11 @@
           <ul class="pagination-list">
 
   <!-- "Назад" и "вперед" это тоже ссылки и элементы того же списка -->
-            <li class="pagination-item"><a href="#" class="button-pagination">Назад</a></li>
+            <li class="pagination-item btn-pagination-prev"><a href="#" class="">Назад</a></li>
             <li class="pagination-item pagination-item-current"><a >1</a></li>
             <li class="pagination-item"><a href="#">2</a></li>
             <li class="pagination-item"><a href="#">3</a></li>
-            <li class="pagination-item"><a href="#">4</a></li>
-            <li class="pagination-item"><a href="#" class="button-pagination">Вперед</a></li>
+            <li class="pagination-item btn-pagination-next"><a href="#" class="">Вперед</a></li>
 
           </ul>
 
@@ -279,8 +278,8 @@
     </div>
     </main>
 
-    <footer class="main-footer main-container">
-      <div class="container">
+    <footer class="main-footer">
+      <div class="main-container">
         <div class="user-conteiner">
         <a href="index.html" class="logo">Device</a>
           <ul class="user-navigation">
@@ -308,9 +307,10 @@
         </div>
         <div class="social">
         <ul class="social-button">
-          <li><a class="social-button" href="#">Фейсбук</a></li>
-          <li><a class="social-button" href="#">Инстаграм</a></li>
-          <li><a class="social-button" href="#">Твиттер</a></li>
+          <li><span class="decor-line-2"></span></li>
+          <li><a class="social-button" href="#"><img src="img/fb.svg" width="32" height="32"></a></li>
+          <li><a class="social-button" href="#"><img src="img/instagram.svg" width="32" height="32"></a></li>
+          <li><a class="social-button" href="#"><img src="img/twitter.svg" width="32" height="32"></a></li>
           <li>
             <a href="https://htmlacademy.ru/intensive/htmlcss" class="footer-logo">
               <p>
