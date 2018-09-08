@@ -683,34 +683,26 @@ ul:first-child a:focus + .main-navigation-container,
 
 .main-slider .slider-controls label {
     display: inline-block;
-    width: 10px;
-    height: 10px;
-    margin: 0 7px;
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
     border-radius: 50%;
     cursor: pointer;
     border: 1px solid black;
 }
 
-.slider-controls label:active .radio-center,
-.slider-controls input[type="radio"]:checked + label .radio-center{
-  background-color: red;
+
+#main-slider-btn-1:checked ~ .slider-controls .radio-center-1,
+ #main-slider-btn-2:checked ~ .slider-controls .radio-center-2,
+ #main-slider-btn-3:checked ~ .slider-controls .radio-center-3{
   display: block;
-  width: 4px;
-  height: 4px;
+  width: 6px;
+  height: 6px;
   border: 1px solid black;
   border-radius: 50%;
   margin-left: 2px;
   margin-top: 2px;
 }
-.slider-controls label:nth-child(1) {
-  background-color: green;
-}
-.main-slider iput[type="radio"]:nth-of-type(1):checked ~ .slider-controls label:nth-child(1),
-#main-slider-btn-2:checked ~ .slider-controls label[for="main-slider-btn-2"] span,
-#main-slider-btn-3:checked ~ .slider-controls label[for="main-slider-btn-3"] span {
-    background-color: yellow;
-}
-
 #main-slider-btn-1:checked ~ .slider-inner .slider-slides{
     transform: translate(0px);
 }

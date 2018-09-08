@@ -91,11 +91,11 @@
        <input type="radio" id="main-slider-btn-3" name="toggle">
        <div class="slider-controls">
 
-         <label for="main-slider-btn-1"><span class="radio-center"></span></label>
+         <label for="main-slider-btn-1"><span class="radio-center-1"></span></label>
 
-         <label for="main-slider-btn-2"><span class="radio-center"></span></label>
+         <label for="main-slider-btn-2"><span class="radio-center-2"></span></label>
 
-         <label for="main-slider-btn-3"><span class="radio-center"></span></label>
+         <label for="main-slider-btn-3"><span class="radio-center-3"></span></label>
        </div>
          <div class = slider-inner>
 
@@ -522,9 +522,10 @@
         mapPopup.classList.remove("modal-show");
       });
       window.addEventListener("keydown", function(evt) {
-        evt.preventDefault();
+
         if (evt.keyCode === 27) {
           if (mapPopup.classList.contains("modal-show")) {
+              evt.preventDefault();
             mapPopup.classList.remove("modal-show");
           }
         }
