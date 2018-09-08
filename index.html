@@ -24,7 +24,7 @@
                       <a href="#">Виртуальная реальность</a>
                     </li>
                     <li>
-                      <a href="#">Моноподы для селфи</a>
+                      <a href="catalog.html">Моноподы для селфи</a>
                     </li>
                     <li>
                       <a href="#">Экшн-камеры</a>
@@ -46,11 +46,11 @@
 
             </div>
           </li>
-          <div class="main-navigation-item-wrapper">
+          <ul class="main-navigation-item-wrapper">
             <li class="main-navigation-item"><a href="#"> Доставка</a></li>
             <li class="main-navigation-item"><a href="#">Гарантия</a></li>
             <li class="main-navigation-item"><a href="#">Контакты</a></li>
-          </div>
+          </ul>
         </ul>
 
         <div class="search-nav-wrapper container">
@@ -108,8 +108,8 @@
               <div class="decor-line"></div>
               <span>01</span>
               <h2>Делай селфи,</br> как Бен Стиллер!</h2>
-              <p>Самая длинная палка для селфи доступна в нашем магазине.</p>
-              <p>Восемь (Восемь, Карл!) метров длинной и весом всего 5 килограмм.</p>
+              <p>Самая длинная палка для селфи доступна в нашем магазине.
+              Восемь (Восемь, Карл!) метров длинной и весом всего 5 килограмм.</p>
               <a class="button button-more" href="#">Подробнее</a>
               <table class="advantages">
                 <tr>
@@ -351,17 +351,17 @@
        <p>Вы можете забрать товар сами, заехав в наш офис. Заодно,
          вы сможете проверить работоспособность покупки. Всякое бывает.
        </p>
-       <a href="map.html">
+       <a href="map.html" class="button-map">
          <img src="img/map.png" width="560" height="222" alt="Карта">
        </a>
-       <a class="button" href="write-us.html">Напишите нам</a>
+       <a class="button write-link" href="write-us.html">Напишите нам</a>
      </section>
    </div>
     </main>
 
     <footer class="main-footer ">
 <div class="main-container">
-        <div class="user-conteiner">
+        <div class="user-container">
         <a href="index.html" class="logo">Device</a>
           <ul class="user-navigation">
             <li>
@@ -384,39 +384,36 @@
         <p>Тел.: +7(495)495-95-95</p>
         </div>
         <div class="social">
+          <span class="decor-line-2"></span>
         <ul class="social-button">
-          <li><span class="decor-line-2"></span></li>
           <li><a class="social-button" href="#"><img src="img/fb.svg" width="32" height="32"></a></li>
           <li><a class="social-button" href="#"><img src="img/instagram.svg" width="32" height="32"></a></li>
           <li><a class="social-button" href="#"><img src="img/twitter.svg" width="32" height="32"></a></li>
-          <li>
-            <a href="https://htmlacademy.ru/intensive/htmlcss" class="footer-logo">
-              <p>
-                <img class="htmla-logo" src="img/logo-html.svg" width="27" height="35" alt="Логотип HTMLAcademy">
-              </p>
-            </a>
-          </li>
         </ul>
-
+        <a href="https://htmlacademy.ru/intensive/htmlcss" class="footer-logo">
+          <p>
+            <img class="htmla-logo" src="img/logo-html.svg" width="27" height="35" alt="Логотип HTMLAcademy">
+        </p>
+      </a>
       </div>
     </div>
     </footer>
 
     <section class="modal modal-login">
       <h2 class="visually-hidden">Напишите нам</h2>
-      <form action="#" method="POST">
+      <form action="#" method="POST" class="form">
         <div class="modal-wrapper">
         <p>
           <label for="write-us-user-name">
             Ваше имя:
           </label>
-          <input type="text" id="write-us-user-name" class="wrong-input" placeholder="Имя Фамилия">
+          <input type="text" id="write-us-user-name" class="login" placeholder="Имя Фамилия">
         </p>
         <p>
           <label for="write-us-user-email">
             Ваш e-mail:
           </label>
-          <input type="email" id="write-us-user-email" class="" placeholder="email@example.com">
+          <input type="email" id="write-us-user-email" class="email" placeholder="email@example.com">
         </p>
         <p>
           <label for="write-us-text">
@@ -436,11 +433,102 @@
     </section>
 
     <section class="modal modal-map">
-      <h2 class="visualy hidden">Мы на карте</h2>
-      <a href="https://yandex.ru/maps/213/moscow/?um=constructor%3A36b26e261a1884e6834caf033f9cc2dc1a2902c290832faa3a8d926e4823199a&source=constructorLink&mode=search&ll=37.531285%2C55.687258&z=16&ncrnd=2562&text=%D0%BC%D0%BE%D1%81%D0%BA%D0%B2%D0%B0%20%D1%83%D0%BB%20%D1%81%D1%82%D1%80%D0%BE%D0%B8%D1%82%D0%B5%D0%BB%D0%B5%D0%B9%2015&sll=30.615054%2C59.771899&sspn=0.017810%2C0.005486">
-        Тут
-      </a>
+      <h2 class="visualy-hidden">Мы на карте</h2>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.1125488779976!2d37.52742931592807!3d55.687030980535816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1536387998822" width="960" height="559" frameborder="0" style="border:0" allowfullscreen></iframe>
       <button type="button" class="modal-close">x</button>
     </section>
+    <script>
+    var link = document.querySelector(".write-link");
+    var popup = document.querySelector(".modal-login");
+    var close = document.querySelector(".modal-close");
+    var form = document.querySelector(".form");
+    var login = document.querySelector(".login");
+    var email = document.querySelector(".email");
+    var textarea = document.querySelector(".textarea");
+    var isStorageSupport = true;
+
+    var storageLogin = "";
+    var storageEmail = "";
+    try {
+      storageLogin = localStorage.getItem("login");
+      storageEmail = localStorage.getItem("email");
+
+    } catch (err) {
+      isStorageSupport = false;
+    }
+    link.addEventListener("click", function(evt){
+      evt.preventDefault();
+      popup.classList.add("modal-show");
+        if (storageLogin) {
+          login.value = storageLogin;
+          email.focus();
+        }
+        else {
+            login.focus();
+          }
+        if (storageLogin && storageEmail) {
+          email.value = storageEmail;
+          textarea.focus();
+
+        }
+
+    });
+    close.addEventListener("click", function(evt){
+      evt.preventDefault();
+      popup.classList.remove("modal-show");
+      login.classList.remove("wrong-input");
+      email.classList.remove("wrong-input");
+      popup.offsetWidth = popup.offsetWidth;
+    });
+    form.addEventListener("submit", function(evt) {
+      if (!login.value) {
+        evt.preventDefault();
+        login.classList.add("wrong-input");
+      } else {
+        if (isStorageSupport) {
+        localStorage.setItem("login", login.value);
+        }
+      }
+      if (!email.value) {
+        evt.preventDefault();
+        email.classList.add("wrong-input");
+      } else {
+        if (isStorageSupport) {
+        localStorage.setItem("email", email.value);
+        }
+      }
+
+    });
+    window.addEventListener("keydown", function(evt) {
+      if (evt.keyCode === 27) {
+        evt.preventDefault();
+        if (popup.classList.contains("modal-show")) {
+          popup.classList.remove("modal-show");
+          login.classList.remove("wrong-input");
+          email.classList.remove("wrong-input");
+        }
+      }
+    });
+    var mapLink = document.querySelector(".button-map");
+    var mapPopup = document.querySelector(".modal-map");
+    var mapClose = mapPopup.querySelector(".modal-close");
+
+      mapLink.addEventListener("click", function(evt) {
+      evt.preventDefault();
+      mapPopup.classList.add("modal-show");
+    });
+      mapClose.addEventListener("click", function(evt) {
+        evt.preventDefault();
+        mapPopup.classList.remove("modal-show");
+      });
+      window.addEventListener("keydown", function(evt) {
+        evt.preventDefault();
+        if (evt.keyCode === 27) {
+          if (mapPopup.classList.contains("modal-show")) {
+            mapPopup.classList.remove("modal-show");
+          }
+        }
+      });
+    </script>
     </body>
 </html>
