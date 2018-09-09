@@ -1135,8 +1135,6 @@ ul:first-child a:focus + .main-navigation-container,
 .main-footer {
   background-color: #464646;
   color: #ffffff;
-  padding-right:140px;
-  padding-left: 140px;
   padding-top: 24px;
   padding-bottom: 47px;
   margin-top: 80px;
@@ -1574,7 +1572,8 @@ ul:first-child a:focus + .main-navigation-container,
   /*sort*/
   .sort {
     padding-bottom: 12px;
-    width: 116%;
+    margin-right: -9999px;
+    padding-right: 9999px;
     background-color: rgba(0, 0, 0, 0.08);
     display: flex;
   }
@@ -1584,10 +1583,13 @@ ul:first-child a:focus + .main-navigation-container,
     margin-top: 22px;
     margin-bottom: 10px;
   }
+
+  .sort ul {
+    padding-top: 20px;
+  }
   .sort-type {
-    width: 100%;
     display: flex;
-    justify-content: flex-start;
+    width: 100%;
     font-family: "OPen Sans", "Arial", sans-serif;
     font-size: 14px;
     line-height: 18px;
@@ -1595,8 +1597,8 @@ ul:first-child a:focus + .main-navigation-container,
     font-weight: 300;
   }
   .bottom, .top {
-    width: 20px;
-    height: 20px;
+    width: 11px;
+    height: 10px;
     opacity: 0.2;
   }
   .sort-type .current {
@@ -1622,20 +1624,18 @@ ul:first-child a:focus + .main-navigation-container,
   opacity: 1;
 }
   .sort-type li {
-    padding-top: 20px;
     list-style: none;
-      padding-left: 20px;
+      padding-left: 30px;
+  }
+  .sort-type li:first-child {
+    padding-left: 50px;
   }
   .sort-type li:nth-child(4) {
     margin-left: auto;
   }
-  .sort-type li:last-child {
-    padding-right: 130px;
-    padding-left: 20px;
-  }
+
   .sort-type a {
     display: inline-block;
-
     text-decoration: none;
     color: rgba(0, 0, 0, 0.3);
     font-family: Open Sans, sans-serif;
@@ -1741,10 +1741,13 @@ ul:first-child a:focus + .main-navigation-container,
     flex-direction: column;
     background-color: #efefef;
     margin-left: -140px;
+    margin-left: -99999px;
+    padding-left: 99999px;
 
   }
   .filters-wrapper {
-    padding-left: 200px;
+    padding-left: 60px;
+
   }
   .filters h2, .catalog h3 {
     font-style: Gilroy, sans-serif;
@@ -1757,14 +1760,15 @@ ul:first-child a:focus + .main-navigation-container,
   .filters-header {
     margin-left: -200px;
     width: 470px;
-
+    margin-left: -99999px;
+    padding-left: 99999px;
     background-color: rgba(0, 0, 0, 0.08);
+    padding-right: 257px;
   }
   .filters-header h2 {
     margin: 0;
     padding-top: 25px;
     padding-bottom: 20px;
-    padding-left: 200px;
   }
 .filters fieldset {
   border: 0 none;
