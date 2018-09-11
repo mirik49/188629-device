@@ -14,7 +14,7 @@
         <b>Device</b>
      </a>
 
-      <nav class="main-navigation">
+      <nav class="main-navigation main-navigation-second">
         <ul class="main-navigation-list">
           <li class="main-navigation-item">
             <a href="#" class="catalog-link">Каталог товаров</a>
@@ -275,7 +275,7 @@
          <h3 class="">Кредит</h3>
          <p>Залезть в долговую яму стало проще! Кредитные консультанты
            подберут для вас наиболее выгодные условия кредита. Выгодные
-           для нашего банка розумеется.
+           для нашего банка разумеется.
          </p>
        </li>
      </div>
@@ -407,19 +407,19 @@
           <label for="write-us-user-name">
             Ваше имя:
           </label>
-          <input type="text" id="write-us-user-name" class="login" placeholder="Имя Фамилия">
+          <input type="text" id="write-us-user-name" class="login" placeholder="Имя Фамилия" pattern="[А-Яа-яA-Za-z]{3,10}">
         </p>
         <p>
           <label for="write-us-user-email">
             Ваш e-mail:
           </label>
-          <input type="email" id="write-us-user-email" class="email" placeholder="email@example.com">
+          <input type="email" id="write-us-user-email" class="email" placeholder="email@example.com" >
         </p>
         <p>
           <label for="write-us-text">
             Текст письма:
           </label>
-          <textarea class="textarea" id="write-us-text" placeholder="В свободной форме">
+          <textarea class="textarea" id="write-us-text" placeholder="В свободной форме" required>
             В свободной форме
           </textarea>
        </p>

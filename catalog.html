@@ -89,9 +89,7 @@
         <h1>Моноподы для селфи</h1>
         <ul class="breadcrumbs ">
           <li><a href="index.html">Главная</a></li>
-          <li><img src="img/nav-arrow.svg" alt="Стрелка"></li>
           <li><a href="catalog.html">Каталог товаров</a></li>
-          <li><img src="img/nav-arrow.svg" alt="Стрелка"></li>
           <li class="breadcrumbs-current"><a>Моноподы для селфи</a></li>
   <!-- На последнем пункте хлебных крошек должна быть тег <a>, только без аттрибута href -->
         </ul>
@@ -155,7 +153,7 @@
                   <label for="check-blue" tabindex="0">Синий</label>
                 </li>
                 <li>
-                  <input type="checkbox" id="check-red" checked>
+                  <input type="checkbox" id="check-red" checked disabled>
                   <label for="check-red" tabindex="0">Красный</label></li>
                 <li>
                   <input type="checkbox" id="check-pink">
@@ -181,8 +179,10 @@
               </li>
               </ul>
           </fieldset>
+          <div class="filters-button-wrapper">
           <label class="visualy-hidden" for="start-filtering">Запуск фильтрования</label>
           <button type="submit" id="start-filtering" class="button" >Показать</button>
+        </div>
           </form>
         </div>
         </section>
@@ -194,14 +194,14 @@
               <li><a href="#" class="current">По цене</a></li>
               <li><a href="#">По типу</a></li>
               <li><a href="#">По популярности</a></li>
-              <li><a href="#" class="top"></a></li>
-              <li><a  href="#" class="bottom current"></a></li>
+              <li><a href="#" class="top"><span class="visually-hidden">Стрелочка вверх</span></a></li>
+              <li><a  href="#" class="bottom current"><span class="visually-hidden">Стрелочка вниз</span></a></li>
   <!-- Стрелочки это тоже ссылки. -->
             </ul>
           </div>
           <h2 class="visualy-hidden">Каталог товаров</h2>
-          <ul class="catalog-list">
-              <div class="catalog-list-wrapper">
+          <ul class="catalog-list catalog-list-wrapper">
+
               <li class="catalog-item" tabindex="0">
                 <div class="catalog-item-img">
                   <img src="img/item-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
@@ -261,16 +261,16 @@
                     <span class="catalog-item-value">4900 руб.</span>
                 </div>
                 </li>
-            </div>
+
           </ul>
           <ul class="pagination-list">
 
   <!-- "Назад" и "вперед" это тоже ссылки и элементы того же списка -->
-            <li class="pagination-item btn-pagination-prev"><a href="#" class="">Назад</a></li>
+            <li class=" btn-pagination-prev"><a href="#" class="">Назад</a></li>
             <li class="pagination-item pagination-item-current"><a >1</a></li>
             <li class="pagination-item"><a href="#">2</a></li>
             <li class="pagination-item"><a href="#">3</a></li>
-            <li class="pagination-item btn-pagination-next"><a href="#" class="">Вперед</a></li>
+            <li class=" btn-pagination-next"><a href="#" class="">Вперед</a></li>
 
           </ul>
 
