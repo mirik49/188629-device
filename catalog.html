@@ -44,16 +44,16 @@
 
           </div>
         </li>
-        <div class="main-navigation-item-wrapper">
+        <ul class="main-navigation-item-wrapper">
           <li class="main-navigation-item"><a href="#"> Доставка</a></li>
           <li class="main-navigation-item"><a href="#">Гарантия</a></li>
           <li class="main-navigation-item"><a href="#">Контакты</a></li>
-        </div>
+        </ul>
       </ul>
 
       <div class="search-nav-wrapper container">
         <div class="search-container visualy-hidden">
-          <form action="#" method="POST" class="search-form">
+          <form action="https://echo.htmlacademy.ru/" method="POST" class="search-form">
             <div class="psevdo-wrapper">
               <input type="search" name="search" class="search" autocomplete="off" placeholder="Поиск по сайту">
 
@@ -100,9 +100,9 @@
         <section class="filters">
           <div class="filters-wrapper">
           <div class="filters-header">
-            <h2>Фильтр</h2>
+            <h2>Фильтр:</h2>
           </div>
-          <form action="#" method="POST">
+          <form action="https://echo.htmlacademy.ru/" method="GET">
            <div class="line line-1"></div>
           <fieldset>
 
@@ -119,14 +119,12 @@
                 <div class="toggle toggle-max"></div>
               </div>
               <div class="price-controls">
-                <label class="minn-price" for="min-price">
-                  От
-                  <input name="min-price" id="minn-price" type="text" value="0">
-                </label>
-                <label class="maxx-price" for="maxx-price">
-                  До
-                  <input name="max-price" id="maxx-price" type="text" value='10000'>
-                </label>
+                <label class="minn-price" for="minn-price">от</label>
+                  <input name="min-price" class="min-price" id="minn-price" type="text" value="0">
+
+                <label class="maxx-price" for="maxx-price">до</label>
+                  <input name="max-price" id="maxx-price" type="text" value='5000'>
+
 
             </div>
               <input class="visualy-hidden" type="range" id="min-price" min="0" max="10000" step="100">
@@ -207,12 +205,12 @@
                   <img src="img/item-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
                 </div>
                 <div class="catalog-item-hover">
-                  <a href="#" class="button button-hover">В корзину</a>
-                  <a href=# class="add-button button-hover">Добавить к сравнению</a>
+                  <button class="button button-hover">В корзину</button>
+                  <button class="add-button button-hover">Добавить к сравнению</button>
                 </div>
 
                 <div class="catalog-item-price">
-                  <a href="#">Любительская селфи палка</a>
+                  <a href="#">Любительская селфи-палка</a>
                   <span class="catalog-item-value">500 руб.</span>
                 </div>
              </li>
@@ -223,8 +221,8 @@
                   <img src="img/item-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
               </div>
               <div class="catalog-item-hover">
-                <a href="#" class="button button-hover">В корзину</a>
-                <a href="#" class="add-button button-hover">Добавить к сравнению</a>
+                <button class="button button-hover">В корзину</button>
+                <button class="add-button button-hover">Добавить к сравнению</button>
               </div>
               <div class="catalog-item-price">
                 <a href="#">Профессиональная селфи-палка</a>
@@ -239,8 +237,8 @@
                   <img src="img/item-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
                 </div>
                 <div class="catalog-item-hover">
-                  <a href="#" class="button button-hover">В корзину</a>
-                  <a href="#" class="add-button button-hover">Добавить к сравнению</a>
+                  <button class="button button-hover">В корзину</button>
+                  <button class="add-button button-hover">Добавить к сравнению</button>
                 </div>
                 <div class="catalog-item-price">
                 <a href="#">Непотопляемая селфи палка</a>
@@ -253,8 +251,8 @@
                   <img src="img/item-4.jpg" width="360" height="380" alt="Следуй за мной селфи-палка">
                 </div>
                 <div class="catalog-item-hover">
-                  <a href="#" class="button button-hover">В корзину</a>
-                  <a href="#" class="add-button button-hover">Добавить к сравнению</a>
+                  <button class="button button-hover">В корзину</button>
+                  <button class="add-button button-hover">Добавить к сравнению</button>
                 </div>
                 <div class="catalog-item-price">
                   <a href="#">Селфи-палка "Следуй за мной"</a>
@@ -278,16 +276,16 @@
     </div>
     </main>
 
-    <footer class="main-footer">
+    <footer class="main-footer inner-page">
       <div class="main-container">
-        <div class="user-conteiner">
+        <div class="user-container">
         <a href="index.html" class="logo">Device</a>
-          <ul class="user-navigation">
+          <ul class="user-navigation inner-page">
             <li>
               <a href="#">Валентин Петухов</a>
             </li>
             <li>
-              <a href="#">Войти</a>
+              <a href="#">Выйти</a>
             </li>
             <li>
               <a href="#">Сравнить</a>
@@ -308,9 +306,9 @@
         <div class="social">
           <span class="decor-line-2"></span>
         <ul class="social-button">
-          <li><a class="social-button" href="#"><img src="img/fb.svg" width="32" height="32"></a></li>
-          <li><a class="social-button" href="#"><img src="img/instagram.svg" width="32" height="32"></a></li>
-          <li><a class="social-button" href="#"><img src="img/twitter.svg" width="32" height="32"></a></li>
+          <li><a class="social-button" href="#"><img src="img/fb.svg" width="32" height="32" alt="facebook"></a></li>
+          <li><a class="social-button" href="#"><img src="img/instagram.svg" width="32" height="32" alt="instagramm"></a></li>
+          <li><a class="social-button" href="#"><img src="img/twitter.svg" width="32" height="32" alt="twitter"></a></li>
         </ul>
         <a href="https://htmlacademy.ru/intensive/htmlcss" class="footer-logo">
           <p>
