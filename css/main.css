@@ -650,6 +650,9 @@ ul:first-child a:focus + .main-navigation-container,
     margin: 0;
     color: #ffffff;
   }
+  .first-slide h2 {
+    padding-right: 165px;
+  }
   .second-slide p:first-child {
     padding-left: 36px;
     padding-top: 18px;
@@ -828,9 +831,9 @@ ul:first-child a:focus + .main-navigation-container,
 }
 
 
-#main-slider-btn-1:checked ~ .slider-controls .radio-center-1,
- #main-slider-btn-2:checked ~ .slider-controls .radio-center-2,
- #main-slider-btn-3:checked ~ .slider-controls .radio-center-3{
+.main-slider input:nth-child(1):checked ~ .slider-controls .radio-center-1,
+.main-slider input:nth-child(2):checked ~ .slider-controls .radio-center-2,
+.main-slider input:nth-child(3):checked ~ .slider-controls .radio-center-3{
   display: block;
   width: 6px;
   height: 6px;
@@ -839,17 +842,17 @@ ul:first-child a:focus + .main-navigation-container,
   margin-left: 2px;
   margin-top: 2px;
 }
-#main-slider-btn-1:checked ~ .slider-inner .slider-slides{
+.main-slider input:nth-child(1):checked ~ .slider-inner .slider-slides{
     -webkit-transform: translate(0px);
         -ms-transform: translate(0px);
             transform: translate(0px);
 }
-#main-slider-btn-2:checked ~ .slider-inner .slider-slides{
+.main-slider input:nth-child(2):checked ~ .slider-inner .slider-slides{
     -webkit-transform: translate(-1160px);
         -ms-transform: translate(-1160px);
             transform: translate(-1160px);
 }
-#main-slider-btn-3:checked ~ .slider-inner .slider-slides{
+.main-slider input:nth-child(3):checked ~ .slider-inner .slider-slides{
     -webkit-transform: translate(-2320px);
         -ms-transform: translate(-2320px);
             transform: translate(-2320px);
@@ -1808,6 +1811,12 @@ ul:first-child a:focus + .main-navigation-container,
   background-color: #ffffff;
   z-index: 1;
 }
+.modal-map iframe {
+  width: 960px;
+  height: 559px;
+  frameborder: 0;
+  border: 0;
+}
 
   /*Catalog*/
   .catalog {
@@ -2384,6 +2393,9 @@ ul:first-child a:focus + .main-navigation-container,
   }
   .inner-page li:first-child {
     margin-right  : 0;
+  }
+.inner-page-header li:nth-child(2) {
+    margin-right: 14px;
   }
   .site-navigation .decoration-exit {
     color: rgba(0, 0, 0, 0.3);
