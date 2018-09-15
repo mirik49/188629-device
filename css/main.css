@@ -173,6 +173,7 @@ left: 78px;
 
 /*site-navigation*/
 
+
 .site-navigation a {
   display: inline-block;
   position: relative;
@@ -883,7 +884,8 @@ ul:first-child a:focus + .main-navigation-container,
 
 .range-controls .toggle {
   position: absolute;
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   top: 10px;
   left: 0px;
   width: 4px;
@@ -1298,7 +1300,7 @@ ul:first-child a:focus + .main-navigation-container,
 .info a, .contact a {
 
   text-decoration: none;
-  font-family: "Open Sans", "Arial", sans-serif;
+  font-family: "Gilroy", "Arial", sans-serif;
   font-size: 18px;
   line-height: 24px;
   color:#000000;
@@ -2020,7 +2022,7 @@ ul:first-child a:focus + .main-navigation-container,
   .catalog-item-hover {
     position: absolute;
     top: 180px;
-    left:60px;
+    left:80px;
     visibility: hidden;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2382,4 +2384,10 @@ ul:first-child a:focus + .main-navigation-container,
   }
   .inner-page li:first-child {
     margin-right  : 0;
+  }
+  .site-navigation .decoration-exit {
+    color: rgba(0, 0, 0, 0.3);
+  }
+  .main-footer .decoration-exit {
+    color: rgba(255, 255, 255, 0.3);
   }
