@@ -38,12 +38,16 @@ close.addEventListener("click", function(evt){
   popup.classList.remove("modal-show");
   login.classList.remove("wrong-input");
   email.classList.remove("wrong-input");
+  popup.classList.remove ("modal-error");
   popup.offsetWidth = popup.offsetWidth;
 });
 form.addEventListener("submit", function(evt) {
   if (!login.value) {
     evt.preventDefault();
+    popup.classList.add("modal-error");
+    popup.offsetWidth = popup.offsetWidth;
     login.classList.add("wrong-input");
+
   } else {
     if (isStorageSupport) {
     localStorage.setItem("login", login.value);
@@ -51,6 +55,8 @@ form.addEventListener("submit", function(evt) {
   }
   if (!email.value) {
     evt.preventDefault();
+    popup.classList.add("modal-error");
+    popup.offsetWidth = popup.offsetWidth;
     email.classList.add("wrong-input");
   } else {
     if (isStorageSupport) {
@@ -66,6 +72,7 @@ window.addEventListener("keydown", function(evt) {
       popup.classList.remove("modal-show");
       login.classList.remove("wrong-input");
       email.classList.remove("wrong-input");
+      popup.classList.remove("modal-error");
     }
   }
 });
