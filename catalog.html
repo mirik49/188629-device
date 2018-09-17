@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/main-min.css">
+    <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&amp;subset=cyrillic" rel="stylesheet">
   </head>
   <body>
@@ -117,8 +117,8 @@
                   <div class="bar" style=" width: 55%">
                   </div>
                 </div>
-                <div class="toggle toggle-min"></div>
-                <div class="toggle toggle-max"></div>
+                <div class="toggle toggle-min"  tabindex="0"></div>
+                <div class="toggle toggle-max"  tabindex="0"></div>
               </div>
               <div class="price-controls">
                 <label class="minn-price" for="minn-price">от</label>
@@ -129,6 +129,8 @@
 
 
             </div>
+            <label class="visually-hidden" for="min-price"> Установка минимальной цены</label>
+            <label class="visually-hidden" for="max-price"> Установка максимальной цены</label>
               <input class="visualy-hidden" type="range" id="min-price" min="0" max="10000" step="100">
               <input class="visualy-hidden" type="range" id="max-price" min="0" max="10000" step="100">
 
